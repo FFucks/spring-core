@@ -1,8 +1,19 @@
 package com.ffucks;
 
-public class Application {
+import com.ffucks.services.Car;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
+
+@SpringBootApplication
+public class Application {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+
+        SpringApplication.run(Application.class, args);
+
+        /*ApplicationContext context = SpringApplication.run(Application.class, args);
+        Car car = context.getBean(Car.class);
+        car.drive();*/
     }
 }
